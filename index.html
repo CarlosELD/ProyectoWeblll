@@ -77,17 +77,36 @@
         <div class="container">
             <h2 class="section-title">Catálogo de Autos Clásicos</h2>
             <p class="mb-5">Explora nuestra exclusiva colección de automóviles icónicos de los años 70, disponibles para venta o renta.</p>
-    <!-- Sección de tipos de marcas -->
-    <section id="tipos2">
-        <h2>Marcas de Automóviles de esta clasificación</h2>
-        <p>Ford</p>
-        <p>Dodge</p>
-        <p>General Motors</p>
-        <p>Citroën (Citrum)</p>
-        <p>Toyota</p>
-    </section>
-    <section id="historia">
-        <h2>Tabla de datos sobre los automóviles clásicos más icónicos del mundo</h2>
+            
+            <!-- Sección de tipos de marcas -->
+            <section id="tipos2">
+                <h2>Marcas de Automóviles de esta clasificación</h2>
+                <p>Ford</p>
+                <p>Dodge</p>
+                <p>General Motors</p>
+                <p>Citroën (Citrum)</p>
+                <p>Toyota</p>
+            </section>
+
+            <section id="historia">
+                <h2>Tabla de datos sobre los automóviles clásicos más icónicos del mundo</h2>
+
+                <!-- Select de filtro por año -->
+                <label for="filterYear"><strong>Filtrar por año:</strong></label>
+                <select id="filterYear">
+                    <option value="1989">Seleccione año</option>
+                    <option value="all">Todos</option>
+                    <option value="1970">1970</option>
+                    <option value="1971">1971</option>
+                    <option value="1972">1972</option>
+                    <option value="1974">1974</option>
+                    <option value="1975">1975</option>
+                    <option value="1977">1977</option>
+                    <option value="1978">1978</option>
+                    <option value="1979">1979</option>
+                </select>
+
+                <h2>Tabla de datos sobre los automóviles clásicos más icónicos del mundo</h2>
         <table>
             <thead>
                 <tr>
@@ -289,10 +308,35 @@
                 </tr>
             </tbody>
         </table>
+            </section>
+        </div>
     </section>
+
     <footer id="contacto">
         <p>&copy; 2025 Mundo de Automóviles Clásicos. Todos los derechos reservados.</p>
     </footer>
-</body>
 
+    <!-- Script de filtrado -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterYear = document.getElementById("filterYear");
+            const table = document.querySelector("#historia table tbody");
+            const rows = table.querySelectorAll("tr");
+
+            filterYear.addEventListener("change", function () {
+                const selectedYear = this.value;
+
+                rows.forEach(row => {
+                    const yearCell = row.cells[1].textContent.trim(); // Columna Año
+                    if (selectedYear === "all" || yearCell === selectedYear) {
+                        row.style.display = "";
+                    } else {
+                        row.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
 </html>
