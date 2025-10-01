@@ -9,24 +9,74 @@
 </head>
 
 <body>
-    <nav>
-        <li class="brand">Motores de los 70's
-            <a href="galeria.html">Galería</a>
-            <a href="#contacto">Contacto</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill me-2"></i>Motors 70's
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <header>
-        <h1>Bienvenidos a la Historia de Automóviles Clásicos</h1>
-        <h2>Explora los autos más icónicos en la historia automotriz</h2>
-        <p>Buen día es un gusto saludarlos, espero que disfruten del contenido de estos autos más icónicos de los 70s.
-        </p>
-    </header>
-    <section id="tipos1">
-        <h2>Tipos de Automóviles de esta clasificación</h2>
-        <p>SUV</p>
-        <p>Camioneta</p>
-        <p>Deportivo</p>
-        <p>Eléctrico</p>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Los Automóviles Clásicos Más Iconicos de los Años 70</h1>
+            <p class="lead mb-4">Descubre, compra o renta los autos legendarios que marcaron una época dorada del automovilismo</p>
+            <a href="#catalogo" class="btn btn-warning btn-lg px-4">Ver Catálogo</a>
+        </div>
     </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-car-front"></i>
+                    </div>
+                    <h3>Venta</h3>
+                    <p>Adquiere tu automóvil clásico soñado con todas las garantías y documentación en regla.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <h3>Renta</h3>
+                    <p>Disfruta de estos iconos automotrices para eventos especiales, sesiones fotográficas o simplemente por placer.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="bi bi-tools"></i>
+                    </div>
+                    <h3>Restauración</h3>
+                    <p>Servicio especializado en restauración y mantenimiento para conservar el valor y autenticidad de tu clásico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo Section -->
+    <section id="catalogo" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Catálogo de Autos Clásicos</h2>
+            <p class="mb-5">Explora nuestra exclusiva colección de automóviles icónicos de los años 70, disponibles para venta o renta.</p>
     <!-- Sección de tipos de marcas -->
     <section id="tipos2">
         <h2>Marcas de Automóviles de esta clasificación</h2>
