@@ -315,27 +315,32 @@
         <p>&copy; 2025 Mundo de Automóviles Clásicos. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script de filtrado -->
+    <div id="ruedaCarga">
+    <div class="rueda"></div>
+</div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const filterYear = document.getElementById("filterYear");
-            const table = document.querySelector("#historia table tbody");
-            const rows = table.querySelectorAll("tr");
+        const filterYear = document.getElementById("filterYear");
+        const table = document.querySelector("#historia table tbody");
+        const rows = table.querySelectorAll("tr");
+        const overlay = document.getElementById("ruedaCarga");
 
-            filterYear.addEventListener("change", function () {
-                const selectedYear = this.value;
-
+        filterYear.addEventListener("change", function () {
+            const selectedYear = this.value;
+            overlay.classList.add("active");
+            setTimeout(() => {
                 rows.forEach(row => {
-                    const yearCell = row.cells[1].textContent.trim(); // Columna Año
+                    const yearCell = row.cells[1].textContent.trim(); 
                     if (selectedYear === "all" || yearCell === selectedYear) {
                         row.style.display = "";
                     } else {
                         row.style.display = "none";
                     }
                 });
-            });
+                overlay.classList.remove("active");
+            }, 500);
         });
+    });
     </script>
-
 </body>
 </html>
