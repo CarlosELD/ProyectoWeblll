@@ -1,346 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los Automóviles Clásicos Más Iconicos de los Años 70</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Los Automóviles Clásicos Más Icónicos de los Años 70</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <!--  CSS -->
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="bi bi-car-front-fill me-2"></i>Motors 70's
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="galeria.html">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-car-front-fill me-2"></i>Motors 70's</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-4">Los Automóviles Clásicos Más Iconicos de los Años 70</h1>
-            <p class="lead mb-4">Descubre, compra o renta los autos legendarios que marcaron una época dorada del automovilismo</p>
-            <a href="#catalogo" class="btn btn-warning btn-lg px-4">Ver Catálogo</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-4">Los Automóviles Clásicos Más Icónicos de los Años 70</h1>
+      <p class="lead mb-4">Descubre, compra o renta los autos legendarios que marcaron una época dorada del automovilismo</p>
+      <a href="#catalogo" class="btn btn-warning btn-lg px-4">Ver Catálogo</a>
+    </div>
+  </section>
 
-    <!-- Features Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <div class="feature-icon">
-                        <i class="bi bi-car-front"></i>
-                    </div>
-                    <h3>Venta</h3>
-                    <p>Adquiere tu automóvil clásico soñado con todas las garantías y documentación en regla.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-icon">
-                        <i class="bi bi-calendar-check"></i>
-                    </div>
-                    <h3>Renta</h3>
-                    <p>Disfruta de estos iconos automotrices para eventos especiales, sesiones fotográficas o simplemente por placer.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-icon">
-                        <i class="bi bi-tools"></i>
-                    </div>
-                    <h3>Restauración</h3>
-                    <p>Servicio especializado en restauración y mantenimiento para conservar el valor y autenticidad de tu clásico.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Catálogo -->
+  <section id="catalogo" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Catálogo de Autos Clásicos</h2>
+      <p class="mb-5">Explora nuestra exclusiva colección de automóviles icónicos de los años 70, disponibles para venta o renta.</p>
+      
+      <!-- Marcas -->
+      <section id="tipos2" class="mb-4">
+        <h3>Marcas de Automóviles de esta clasificación</h3>
+        <p>Ford</p>
+        <p>Dodge</p>
+        <p>General Motors</p>
+        <p>Citroën</p>
+        <p>Toyota</p>
+      </section>
 
-    <!-- Catálogo Section -->
-    <section id="catalogo" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Catálogo de Autos Clásicos</h2>
-            <p class="mb-5">Explora nuestra exclusiva colección de automóviles icónicos de los años 70, disponibles para venta o renta.</p>
-            
-            <!-- Sección de tipos de marcas -->
-            <section id="tipos2">
-                <h2>Marcas de Automóviles de esta clasificación</h2>
-                <p>Ford</p>
-                <p>Dodge</p>
-                <p>General Motors</p>
-                <p>Citroën (Citrum)</p>
-                <p>Toyota</p>
-            </section>
+      <!-- Filtro -->
+      <div class="mb-3">
+        <label for="filterYear" class="form-label"><strong>Filtrar por año:</strong></label>
+        <select id="filterYear" class="form-select w-auto d-inline-block">
+          <option value="all">Todos</option>
+          <option value="1970">1970</option>
+          <option value="1971">1971</option>
+          <option value="1972">1972</option>
+          <option value="1974">1974</option>
+          <option value="1975">1975</option>
+          <option value="1977">1977</option>
+          <option value="1978">1978</option>
+          <option value="1979">1979</option>
+        </select>
+      </div>
 
-            <section id="historia">
-
-                <!-- Select de filtro por año -->
-                <label for="filterYear"><strong>Filtrar por año:</strong></label>
-                <select id="filterYear">
-                    <option value="1989">Seleccione año</option>
-                    <option value="all">Todos</option>
-                    <option value="1970">1970</option>
-                    <option value="1971">1971</option>
-                    <option value="1972">1972</option>
-                    <option value="1974">1974</option>
-                    <option value="1975">1975</option>
-                    <option value="1977">1977</option>
-                    <option value="1978">1978</option>
-                    <option value="1979">1979</option>
-                </select>
-
-                <h2>Tabla de datos sobre los automóviles clásicos más icónicos del mundo</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Modelo</th>
-                    <th>Año</th>
-                    <th>Motor del modelo</th>
-                    <th>Potencia</th>
-                    <th>Descripción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ford Mustang Shelby GT 500</td>
-                    <td>1970</td>
-                    <td>428 cu in (7.0 L) V8</td>
-                    <td>650 HP</td>
-                    <td>Un ícono del automovilismo, conocido por su motor V8 y su diseño deportivo. En 1967, Shelby
-                        American construyó 26 Mustang Coupé según la especificación del Grupo 2 de la FIA. Esto permitió
-                        que los autos compitieran en la clase SCCA A- Sedan y en la serie Trans Am.</td>
-                </tr>
-                <tr>
-                    <td>Ford Mustang Shelby Cobra GT 500</td>
-                    <td>1970</td>
-                    <td>428 cu in (7.0 L) Cobra Jet V8</td>
-                    <td>230 HP</td>
-                    <td>Un ícono del automovilismo, se aplicó el nombre Cobra a este modelo, lo cual se comercializó
-                        como Shelby Cobra GT 500. Ford suspendió el motor de código K de elevador sólido, por lo que
-                        Shelby usó el elevador hidráulico 302 de 230 hp.</td>
-                </tr>
-                <tr>
-                    <td>Dodge Super Bee</td>
-                    <td>1970</td>
-                    <td>318 V8 / 270 V8</td>
-                    <td>360 HP / 300 HP</td>
-                    <td>El Dodge Super Bee es un coche muscular comercializado por Dodge, que fue producido para los
-                        años modelo 1968 a 1970. Era el poderoso coche de Dodge y una versión rebajada del Plymouth Road
-                        Runner.</td>
-                </tr>
-                <tr>
-                    <td>Mustang Boss 302</td>
-                    <td>1970</td>
-                    <td>V8 de 302</td>
-                    <td>290 HP</td>
-                    <td>El Boss 302 Mustang fue diseñado por Larry Shinoda, un ex empleado de GM, quien eliminó las
-                        tomas de aire falsas en los guardabarros del panel trasero de los Mustang de producción regular
-                        de 1969.</td>
-                </tr>
-                <tr>
-                    <td>Pontiac Firebird</td>
-                    <td>1970</td>
-                    <td>7.5 de 294 CV</td>
-                    <td>335 HP</td>
-                    <td>En el 70 se lanzó la segunda generación del modelo estadounidense, que
-                        mejoraba al original y era más manejable que sus rivales directos.
-                        Además, la variante Trans-Am llegó a montar un enorme motor 7.5 de 294 CV… antes de que la
-                        crisis del petróleo obligara a cambiar de manera radical y decantarse por motores más pequeños y
-                        eficientes.</td>
-                </tr>
-                <tr>
-                    <td>Citroën SM</td>
-                    <td>1970</td>
-                    <td>V6 a 90°</td>
-                    <td>168 HP</td>
-                    <td>El gran turismo francés era peculiar por ciertos rasgos estéticos (las ruedas traseras
-                        carenadas, la matrícula delantera protegida por el cristal de los faros), pero era un adelantado
-                        a su tiempo en tecnología: dirección asistida, suspensión hidroneumática, cuatro frenos de
-                        disco, faros direccionales…</td>
-                </tr>
-                <tr>
-                    <td>Toyota Celica</td>
-                    <td>1970</td>
-                    <td>DOHC de 1600 cc equipado con Mikuni de dos carburadores Solex.</td>
-                    <td>113 HP</td>
-                    <td>El Celica fue diseñado originalmente para conductores de espíritu joven y que desearan algo más
-                        que un simple medio de transporte. El diseño del Celica comenzó en 1967, se presentó en el Salón
-                        del Automóvil de Tokio de 1970 y el vehículo fue lanzado al público en el mismo año. Basado en
-                        el prototipo Ex-1 Coche del futuro, su estilo era absolutamente revolucionario para la época e
-                        influyó de forma notable en el establecimiento del segmento del mercado de deportivos del
-                        segmento D asequibles, potentes y fiables.</td>
-                </tr>
-                <tr>
-                    <td>Plymouth Superbird</td>
-                    <td>1971</td>
-                    <td>V8 de 383 plg³ (6,3 litros)</td>
-                    <td>335 HP</td>
-                    <td colspan="2">En 1970 cambia su nombre por el de Superbird. Era similar al Dodge Charger 500
-                        Daytona y se presentó como vehículo de competición en la NASCAR y para ser vendido en las
-                        agencias Plymouth como automóvil de carreras homologado para la circulación en la calle.</td>
-                </tr>
-                <tr>
-                    <td>Ford Thunderbird</td>
-                    <td>1971</td>
-                    <td>429 in³385 V8</td>
-                    <td>202 HP</td>
-                    <td colspan="2">Famoso por su estilo único con una parrilla que parece un pico.</td>
-                </tr>
-                <tr>
-                    <td>De Tomaso Pantera</td>
-                    <td>1971</td>
-                    <td>8 Ford Cleveland de 351 plg3 (5,8 L)</td>
-                    <td>285 HP</td>
-                    <td colspan="2">El De Tomaso Pantera es un automóvil deportivo producido por el fabricante italiano
-                        De Tomaso entre 1971 y 1991. Es un dos plazas con motor central-trasero y tracción trasera.</td>
-                </tr>
-                <tr>
-                    <td>Aston Martin Vantage</td>
-                    <td>1972</td>
-                    <td>5.3 L V8</td>
-                    <td>315 hp</td>
-                    <td colspan="2">La carrocería era una reinterpretación moderna del aspecto tradicional de Aston
-                        Martin, con una parrilla cuadrada y cuatro faros (William Towns admitió que la parte trasera se
-                        "tomó prestada" de los primeros Ford Mustang).</td>
-                </tr>
-                <tr>
-                    <td>Lancia Stratos</td>
-                    <td>1972</td>
-                    <td>V6 a 65º Ferrari Dino de 2419 cm³ (2,4 L)</td>
-                    <td>187 HP</td>
-                    <td colspan="2">Uno de los modelos más afilados jamás concebidos, hijo de otra era en la que los
-                        rallies obligaban a homologar unidades de calle para poder participar.</td>
-                </tr>
-                <tr>
-                    <td>Lamborghini Countach</td>
-                    <td>1974</td>
-                    <td>4.0 V12</td>
-                    <td>370 HP449 HP</td>
-                    <td colspan="2">El primer prototipo del Countach fue diseñado por Marcello Gandini y fue presentado
-                        en el Salón del Automóvil de Ginebra de 1971,6​ tres años antes de iniciarse su fabricación,
-                        como Lamborghini Countach LP500.
-                        El nombre "LP500" hace referencia a su motorización y posición del motor (Longitudinale
-                        Posteriore 5000 cc). </td>
-                </tr>
-                <tr>
-                    <td>Lotus Esprit</td>
-                    <td>1975</td>
-                    <td>4 en línea Turbo de 2-22L V8Biturbo de 3,5 L</td>
-                    <td>140 HP350 HP</td>
-                    <td colspan="2">El Lotus Esprit es un automóvil deportivo construido por Lotus Cars en el
-                        Reino Unido desde el año 1976 hasta el año 2004. En 1971, Colin Chapman, por entonces CEO de
-                        Lotus, encargó el diseño del prototipo a Italdesign Giugiaro para que este estuviera listo para
-                        el Salón del Automóvil de Turín del año siguiente.</td>
-                </tr>
-                <tr>
-                    <td>Ford Bronco</td>
-                    <td>1977</td>
-                    <td>V-8 de Ford Racing</td>
-                    <td>340 HP</td>
-                    <td colspan="2">El Bronco de segunda generación marca la introducción del diseño común con el Ford
-                        F-100 y retuvo el estilo de carrocería de techo rígido desmontable para la camioneta de tres
-                        puertas, aunque ahora solo con
-                        fibra de vidrio sobre el área del asiento trasero (y no una parte superior de acero de longitud
-                        completa), continuó hasta la retirada de la línea de modelos en 1996.</td>
-                </tr>
-                <tr>
-                    <td>Porsche 928</td>
-                    <td>1977</td>
-                    <td>4.5 V8</td>
-                    <td>295 HP449 HP</td>
-                    <td colspan="2">El diseño del 928 fue muy moderno cuando se presentó en 1977 y se consolidó como
-                        atemporal. Salvo ligeras modificaciones, fue construido casi sin cambios hasta 1995. Sus rasgos
-                        característicos son los faros
-                        redondos plegables pero visibles y la zaga muy abultada; recuerda la forma de los tiburones.
-                    </td>
-                </tr>
-                <tr>
-                    <td>BMW M1</td>
-                    <td>1978</td>
-                    <td>6 en línea M88/1 de 3453 cm³ (3,5 L)</td>
-                    <td>273 HP</td>
-                    <td colspan="2">El M1 es uno de los raros ejemplos de automóvil cuya versión de competición fue la
-                        base para la versión de calle, puesto que la normativa vigente en aquella época, establecía la
-                        necesidad de producir un
-                        mínimo de 400 unidades aptas para circular por calle de cualquiera de los vehículos del Grupo 4
-                        (Gran Turismo).</td>
-                </tr>
-                <tr>
-                    <td>Mazda RX-7</td>
-                    <td>1978</td>
-                    <td>Wankel de 2 rotores de 1146 a 1308 cm³ (1,1 a 1,3 litros)</td>
-                    <td>104 a 276 HP</td>
-                    <td colspan="2">El penúltimo integrante de la familia RX de Mazda tuvo una larga vida y varias
-                        generaciones con las que evolucionó hasta convertirse en un deportivo realmente querido por
-                        preparadores y competidores de drift.
-                        El original destacaba por su afinado diseño y su motor rotativo.</td>
-                </tr>
-                <tr>
-                    <td>Mercedes Clase G</td>
-                    <td>1979</td>
-                    <td>un 2.0 litros de 113 CV ("200 GE"), un 2.3 litros de 122 CV ("230GE") y un 2.8 litros de 150 CV
-                        ("280GE")seis cilindros de 2.8 litros y 156 CV ("280GE").diésel eran un cuatro cilindros en
-                        línea de 2.4 litros y 72 CV ("240GD")
-                        un cinco cilindros en línea de 2.5 litros y 84 CV ("250GD")cinco cilindros en línea de 3.0
-                        litros y 88 CV ("300GD")</td>
-                    <td>111 HP148 HP154 HP71 HP83 HP87 HP</td>
-                    <td colspan="2">El penúltimo integrante de la familia RX de Mazda tuvo una larga vida y varias
-                        generaciones con las que evolucionó hasta convertirse en un deportivo realmente querido por
-                        preparadores y competidores de drift.
-                        El original destacaba por su afinado diseño y su motor rotativo.</td>
-                </tr>
-            </tbody>
+      <!-- Tabla -->
+      <section id="historia">
+        <h3>Tabla de datos sobre los automóviles clásicos más icónicos del mundo</h3>
+            <tr>
+              <th>Modelo</th>
+              <th>Año</th>
+              <th>Motor del modelo</th>
+              <th>Potencia</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <table> 
+<thead> 
+<tr> 
+<th>Modelo</th> 
+<th>Año</th> 
+<th>Motor del modelo</th>
+ <th>Potencia</th> 
+<th>Descripción</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td>Ford Mustang Shelby GT 500</td> 
+<td>1970</td> 
+<td>428 cu in (7.0 L) V8</td> 
+<td>650 HP</td> 
+<td>Un ícono del automovilismo, conocido por su motor V8 y su diseño deportivo.</td> 
+</tr>
+ <tr> 
+<td>Chevrolet Camaro Z28</td> 
+<td>1971</td> 
+<td>350 cu in (5.7 L) V8</td> 
+<td>330 HP</td>
+<td>Un muscle car clásico con gran rendimiento y estilo único.</td> 
+</tr> 
+<tr> 
+<td>Datsun 240Z</td> 
+<td>1972</td> 
+<td>2.4 L I6</td> 
+<td>151 HP</td> 
+<td>El auto deportivo japonés que abrió camino en el mercado global.</td> 
+</tr> 
+<tr> 
+<td>Lamborghini Countach</td> 
+<td>1974</td> 
+<td>4.0 L V12</td> 
+<td>370 HP</td> 
+<td>Uno de los diseños más revolucionarios de Lamborghini.</td> 
+</tr> 
+<tr> 
+<td>Lotus Esprit</td> 
+<td>1975</td> 
+<td>2.0 L I4</td> 
+<td>160 HP</td> 
+<td>Un deportivo británico con diseño de Giugiaro.</td> 
+</tr> 
+<tr> 
+<td>Ford Bronco</td> 
+<td>1977</td> 
+<td>5.0 L V8</td> 
+<td>200 HP</td> 
+<td>El todoterreno clásico estadounidense.</td> 
+</tr> 
+<tr> 
+<td>Porsche 928</td> 
+<td>1978</td> 
+<td>4.5 L V8</td> 
+<td>240 HP</td> 
+<td>Un Porsche innovador con motor delantero.</td> 
+</tr> 
+<tr> <td>Mercedes Clase G</td> 
+<td>1979</td> 
+<td>2.8 L I6</td> 
+<td>150 HP</td> 
+<td>El legendario todoterreno alemán, símbolo de resistencia.</td> 
+</tr>
+ </tbody>
+          </tbody>
         </table>
-            </section>
-        </div>
-    </section>
+      </section>
+    </div>
+  </section>
 
-    <footer id="contacto">
-        <p>&copy; 2025 Mundo de Automóviles Clásicos. Todos los derechos reservados.</p>
-    </footer>
+  <!-- Loader -->
+  <div id="ruedaCarga"><div class="rueda"></div></div>
 
-    <div id="ruedaCarga">
-    <div class="rueda"></div>
-</div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const filterYear = document.getElementById("filterYear");
-        const table = document.querySelector("#historia table tbody");
-        const rows = table.querySelectorAll("tr");
-        const overlay = document.getElementById("ruedaCarga");
+  <!-- Footer -->
+  <footer id="contacto" class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Mundo de Automóviles Clásicos. Todos los derechos reservados.</p>
+  </footer>
 
-        filterYear.addEventListener("change", function () {
-            const selectedYear = this.value;
-            overlay.classList.add("active");
-            setTimeout(() => {
-                rows.forEach(row => {
-                    const yearCell = row.cells[1].textContent.trim(); 
-                    if (selectedYear === "all" || yearCell === selectedYear) {
-                        row.style.display = "";
-                    } else {
-                        row.style.display = "none";
-                    }
-                });
-                overlay.classList.remove("active");
-            }, 500);
-        });
+  <!-- Script filtro con loader -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterYear = document.getElementById("filterYear");
+      const rows = document.querySelectorAll("#historia table tbody tr");
+      const overlay = document.getElementById("ruedaCarga");
+
+      filterYear.addEventListener("change", () => {
+        const selectedYear = filterYear.value;
+        overlay.classList.add("active");
+        setTimeout(() => {
+          rows.forEach(row => {
+            const year = row.cells[1].textContent.trim();
+            row.style.display = (selectedYear === "all" || year === selectedYear) ? "" : "none";
+          });
+          overlay.classList.remove("active");
+        }, 500);
+      });
     });
-    </script>
+  </script>
+
+  <!-- Script animaciones Popmotion o fallback -->
+  <script>
+  (function () {
+    function createAnimate() {
+      if (window.popmotion && typeof window.popmotion.animate === "function") {
+        return window.popmotion.animate.bind(window.popmotion);
+      }
+      return function (opts) {
+        const from = opts.from || 0;
+        const to = opts.to || 1;
+        const duration = opts.duration || 300;
+        const delay = opts.delay || 0;
+        const onUpdate = opts.onUpdate || function () {};
+        const ease = opts.ease || function (t) { return t; };
+
+        let startTime = null;
+        function step(now) {
+          if (!startTime) startTime = now + delay;
+          if (now < startTime) return requestAnimationFrame(step);
+          const elapsed = now - startTime;
+          const t = Math.min(1, elapsed / duration);
+          const value = from + (to - from) * ease(t);
+          onUpdate(value);
+          if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        return { stop: () => {} };
+      };
+    }
+    const animate = createAnimate();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const title = document.querySelector(".hero-section h1");
+      const subtitle = document.querySelector(".hero-section p.lead");
+
+      if (title) {
+        title.style.opacity = 0;
+        title.style.transform = "translateY(-50px)";
+        animate({ from: 0, to: 1, duration: 1200, onUpdate: v => title.style.opacity = v });
+        animate({ from: -50, to: 0, duration: 1200, onUpdate: v => title.style.transform = `translateY(${v}px)` });
+      }
+      if (subtitle) {
+        subtitle.style.opacity = 0;
+        subtitle.style.transform = "translateY(30px)";
+        setTimeout(() => {
+          animate({ from: 0, to: 1, duration: 1000, onUpdate: v => subtitle.style.opacity = v });
+          animate({ from: 30, to: 0, duration: 1000, onUpdate: v => subtitle.style.transform = `translateY(${v}px)` });
+        }, 800);
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
