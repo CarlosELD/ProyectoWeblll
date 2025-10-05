@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - Automóviles Clásicos</title>
     <link rel="stylesheet" href="galeria.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
 </head>
 
 <body>
@@ -33,14 +35,81 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-4">Galería de Autos Clásicos</h1>
-            <p class="lead">Explora nuestra colección completa de automóviles icónicos de los años 70</p>
-        </div>
-    </section>
+    <!-- Contenido principal con transición Barba -->
+    <div data-barba="container" data-barba-namespace="galeria" class="barba-container">
+        <!-- Hero Section -->
+        <section class="hero-section text-center transition-fade">
+            <div class="container">
+                <h1 class="display-4 font-weight-bold mb-4">Galería de Autos Clásicos</h1>
+                <p class="lead">Explora nuestra exclusiva colección de automóviles icónicos de los años 70</p>
+            </div>
+        </section>
+        <section class="container mb-5 transition-fade">
+            <div class="image-placeholder">
+                <img src="imagenes/Citrum - 1.jpg"
+                    alt="Colección de autos clásicos" class="img-fluid">
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Nuestra Colección Exclusiva</h2>
+                    <p class="lead">Descubre los automóviles más emblemáticos de la década de los 70, meticulosamente
+                        conservados y disponibles para venta o renta.</p>
+                </div>
+            </div>
+            <div class="image-placeholder">
+                <img src="imagenes/elemento grafico.png"
+                    alt="Colección de autos clásicos" class="img-fluid">
+            </div>
+        </section>
+        <!-- Hero Section -->
+        <section class="hero-section text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold mb-4">Galería de Autos Clásicos</h1>
+                <p class="lead">Explora nuestra colección completa de automóviles icónicos de los años 70</p>
+            </div>
+        </section>
+        <section class="container transition-fade">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title text-center">Más Automóviles en Nuestra Colección</h2>
+                </div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="imagenes/ford-mustang-boss-302 - 1.jpg" alt="Mustang Boss 302"
+                        onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                    <div class="p-3">
+                        <h5>Mustang Boss 302</h5>
+                        <p class="mb-0">Año: 1970 | Potencia: 290 HP</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/Pontiac_Firebird - 1.jpg" alt="Pontiac Firebird"
+                        onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                    <div class="p-3">
+                        <h5>Pontiac Firebird</h5>
+                        <p class="mb-0">Año: 1970 | Potencia: 335 HP</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/Lamborghini_Countach - 1.jpg" alt="Lamborghini Countach"
+                        onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                    <div class="p-3">
+                        <h5>Lamborghini Countach</h5>
+                        <p class="mb-0">Año: 1974 | Potencia: 370-449 HP</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/Porsche_928 - 1.jpg" alt="Porsche 928"
+                        onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                    <div class="p-3">
+                        <h5>Porsche 928</h5>
+                        <p class="mb-0">Año: 1977 | Potencia: 295-449 HP</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <div class="gallery">
         <header>
             <h1>Bienvenidos a la galería oficial de automóviles</h1>
@@ -51,156 +120,254 @@
         </header>
         <!-- Galería de imágenes de automóviles clásicos -->
         <section>
-            <h2>Galería de Automóviles Clásicos</h2>
-            <div class="car-item">
-                <h3>Ford Mustang Shelby GT 500</h3>
-                <div class="car-images">
-                    <img src="imagenes/Shelby_Mustang_GT500 - 1.jpg" alt="Ford Mustang Shelby GT 500" width="500">
-                    <img src="imagenes/Shelby_Mustang_GT500 - 2.jpg" alt="Ford Mustang Shelby GT 500 vista lateral"
-                        width="500">
-                    <img src="imagenes/Shelby_Mustang_GT500 - 3.jpg" alt="Ford Mustang Shelby GT 500 interior"
-                        width="500">
+            <section class="container car-gallery transition-fade">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="section-title text-center">Automóviles Destacados</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="car-item">
-                <h3>Ford Mustang Shelby Cobra GT 500</h3>
-                <div class="car-images">
-                    <img src="imagenes/Shelby_Mustang_ Cobra_GT500.jpg" alt="Ford Mustang Shelby Cobra GT 500"
-                        width="500">
+
+                <!-- Ford Mustang Shelby GT 500 -->
+                <div class="car-item transition-fade">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div id="carousel1" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagenes/Shelby_Mustang_GT500 - 1.jpg" class="d-block w-100 rounded"
+                                            alt="Ford Mustang Shelby GT 500"
+                                            onerror="this.src='https://images.unsplash.com/photo-1551524164-6ca88f6f0960?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/Shelby_Mustang_GT500 - 2.jpg" class="d-block w-100 rounded"
+                                            alt="Ford Mustang Shelby GT 500 vista lateral"
+                                            onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/Shelby_Mustang_GT500 - 3.jpg" class="d-block w-100 rounded"
+                                            alt="Ford Mustang Shelby GT 500 interior"
+                                            onerror="this.src='https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Siguiente</span>
+                                </a>
+                            </div>
+                            <div class="carousel-thumbnails">
+                                <img src="imagenes/Shelby_Mustang_GT500 - 1.jpg" class="active" data-target="#carousel1"
+                                    data-slide-to="0"
+                                    onerror="this.src='https://images.unsplash.com/photo-1551524164-6ca88f6f0960?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                <img src="imagenes/Shelby_Mustang_GT500 - 2.jpg" data-target="#carousel1"
+                                    data-slide-to="1"
+                                    onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                <img src="imagenes/Shelby_Mustang_GT500 - 3.jpg" data-target="#carousel1"
+                                    data-slide-to="2"
+                                    onerror="this.src='https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="car-info h-100">
+                                <h3>Ford Mustang Shelby GT 500</h3>
+                                <p class="text-muted">Un ícono del automovilismo, conocido por su motor V8 y su diseño
+                                    deportivo. En 1967, Shelby American construyó 26 Mustang Coupé según la
+                                    especificación del Grupo 2 de la FIA.</p>
+
+                                <div class="row mt-4">
+                                    <div class="col-md-6">
+                                        <div class="car-feature">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                            <span><strong>Potencia:</strong> 650 HP</span>
+                                        </div>
+                                        <div class="car-feature">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span><strong>Año:</strong> 1970</span>
+                                        </div>
+                                        <div class="car-feature">
+                                            <i class="fas fa-gas-pump"></i>
+                                            <span><strong>Motor:</strong> 428 cu in (7.0 L) V8</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="car-feature">
+                                            <i class="fas fa-palette"></i>
+                                            <span><strong>Color:</strong> Azul con franjas blancas</span>
+                                        </div>
+                                        <div class="car-feature">
+                                            <i class="fas fa-cogs"></i>
+                                            <span><strong>Transmisión:</strong> Manual</span>
+                                        </div>
+                                        <div class="car-feature">
+                                            <i class="fas fa-road"></i>
+                                            <span><strong>Kilometraje:</strong> 45,000 km</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <span class="price-tag">$125,000</span>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button class="btn btn-primary mr-2">Consultar Venta</button>
+                                    <button class="btn btn-outline-primary">Consultar Renta</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="car-item">
-                <h3>Dodge Super Bee</h3>
-                <div class="car-images">
-                    <img src="imagenes/Super_Bee - 1.jpg" alt="Dodge Super Bee" width="500">
-                    <img src="imagenes/Super_Bee - 2.jpg" alt="Dodge Super Bee vista lateral" width="500">
-                    <img src="imagenes/Super_Bee - 3.jpg" alt="Dodge Super Bee interior" width="500">
+
+                <!-- Dodge Super Bee -->
+                <div class="car-item transition-fade">
+                    <div class="row">
+                        <div class="col-lg-6 order-lg-2">
+                            <div id="carousel2" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="imagenes/Super_Bee - 1.jpg" class="d-block w-100 rounded"
+                                            alt="Dodge Super Bee"
+                                            onerror="this.src='https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/Super_Bee - 2.jpg" class="d-block w-100 rounded"
+                                            alt="Dodge Super Bee vista lateral"
+                                            onerror="this.src='https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="imagenes/Super_Bee - 3.jpg" class="d-block w-100 rounded"
+                                            alt="Dodge Super Bee interior"
+                                            onerror="this.src='https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Siguiente</span>
+                                </a>
+                            </div>
+                            <div class="carousel-thumbnails">
+                                <img src="imagenes/Super_Bee - 1.jpg" class="active" data-target="#carousel2"
+                                    data-slide-to="0"
+                                    onerror="this.src='https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                <img src="imagenes/Super_Bee - 2.jpg" data-target="#carousel2" data-slide-to="1"
+                                    onerror="this.src='https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                                <img src="imagenes/Super_Bee - 3.jpg" data-target="#carousel2" data-slide-to="2"
+                                    onerror="this.src='https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-1">
+                            <div class="car-info h-100">
+                                <h3>Dodge Super Bee</h3>
+                                <p class="text-muted">El Dodge Super Bee es un coche muscular comercializado por Dodge,
+                                    que fue producido para los años modelo 1968 a 1970. Era el poderoso coche de Dodge y
+                                    una versión rebajada del Plymouth Road Runner.</p>
+
+                                <div class="row mt-4">
+                                    <div class="col-md-6">
+                                        <div class="car-feature">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                            <span><strong>Potencia:</strong> 360 HP</span>
+                                        </div>
+                                        <div class="car-feature">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span><strong>Año:</strong> 1970</span>
+                                        </div>
+                                        <div class="car-feature">
+                                            <i class="fas fa-gas-pump"></i>
+                                            <span><strong>Motor:</strong> 318 V8 / 270 V8</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="car-feature">
+                                            <i class="fas fa-palette"></i>
+                                            <span><strong>Color:</strong> Amarillo con franjas negras</span>
+                                        </div>
+                                        <div class="car-feature">
+                                            <i class="fas fa-cogs"></i>
+                                            <span><strong>Transmisión:</strong> Manual</span>
+                                        </div>
+                                        <div class="car-feature">
+                                            <i class="fas fa-road"></i>
+                                            <span><strong>Kilometraje:</strong> 62,000 km</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <span class="price-tag">$98,500</span>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button class="btn btn-primary mr-2">Consultar Venta</button>
+                                    <button class="btn btn-outline-primary">Consultar Renta</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="car-item">
-                <h3>Mustang Boss 302</h3>
-                <div class="car-images">
-                    <img src="imagenes/ford-mustang-boss-302 - 1.jpg" alt="Mustang Boss 302" width="500">
-                    <img src="imagenes/ford-mustang-boss-302 - 2.jpg" alt="Mustang Boss 302 vista lateral" width="500">
-                    <img src="imagenes/ford-mustang-boss-302 - 3.jpg" alt="Mustang Boss 302 interior" width="500">
+
+            </section>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <h5>Classic Motors 70's</h5>
+                            <p>Tu destino para encontrar los automóviles clásicos más icónicos de los años 70. Ofrecemos
+                                venta y renta de vehículos únicos y bien conservados.</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 mb-4">
+                            <h5>Enlaces</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html">Inicio</a></li>
+                                <li><a href="galeria.html">Galería</a></li>
+                                <li><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5>Servicios</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Venta de Autos Clásicos</a></li>
+                                <li><a href="#">Renta de Autos Clásicos</a></li>
+                                <li><a href="#">Restauración</a></li>
+                                <li><a href="#">Asesoría</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <h5>Contacto</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-map-marker-alt mr-2"></i> Av. Principal 123, Ciudad</li>
+                                <li><i class="fas fa-phone mr-2"></i> +1 234 567 890</li>
+                                <li><i class="fas fa-envelope mr-2"></i> info@classicmotors70.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="bg-light">
+                    <div class="text-center py-3">
+                        <p class="mb-0">&copy; 2024 Classic Motors 70's. Todos los derechos reservados.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="car-item">
-                <h3>Pontiac Firebird</h3>
-                <div class="car-images">
-                    <img src="imagenes/Pontiac_Firebird - 1.jpg" alt="Pontiac Firebird" width="500">
-                    <img src="imagenes/Pontiac_Firebird - 2.jpg" alt="Pontiac Firebird vista lateral" width="500">
-                    <img src="imagenes/Pontiac_Firebird - 3.jpg" alt="Pontiac Firebird interior" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Citrum</h3>
-                <div class="car-images">
-                    <img src="imagenes/Citrum - 1.jpg" alt="Citrum" width="500">
-                    <img src="imagenes/Citrum - 2.jpg" alt="Citrum vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Toyota Celica</h3>
-                <div class="car-images">
-                    <img src="imagenes/Toyota_Celica - 1.jpg" alt="Toyota Celica" width="500">
-                    <img src="imagenes/Toyota_Celica - 2.jpg" alt="Toyota Celica vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Plymouth Superbird</h3>
-                <div class="car-images">
-                    <img src="imagenes/Plymouth-Superbird - 1.jpg" alt="Plymouth Superbird" width="500">
-                    <img src="imagenes/Plymouth-Superbird - 2.jpg" alt="Plymouth Superbird vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Ford Thunderbird</h3>
-                <div class="car-images">
-                    <img src="imagenes/Ford_ThunderBird - 1.jpg" alt="Ford Thunderbird" width="500">
-                    <img src="imagenes/Ford_ThunderBird - 2.jpg" alt="Ford Thunderbird vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>De Tomaso Pantera</h3>
-                <div class="car-images">
-                    <img src="imagenes/De-Tomaso-Pantera - 1.jpeg" alt="De Tomaso Pantera" width="500">
-                    <img src="imagenes/De-Tomaso-Pantera - 2.jpeg" alt="De Tomaso Pantera vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Aston Martin Vantage</h3>
-                <div class="car-images">
-                    <img src="imagenes/V8_Vantage - 1.jpg" alt="Aston Martin Vantage" width="500">
-                    <img src="imagenes/V8_Vantage - 2.jpg" alt="Aston Martin Vantage vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Lancia Stratos</h3>
-                <div class="car-images">
-                    <img src="imagenes/Lancia_Stratos - 1.jpg" alt="Lancia Stratos" width="500">
-                    <img src="imagenes/Lancia_Stratos - 2.jpg" alt="Lancia Stratos vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Lamborghini Countach</h3>
-                <div class="car-images">
-                    <img src="imagenes/Lamborghini_Countach - 1.jpg" alt="Lamborghini Countach" width="500">
-                    <img src="imagenes/Lamborghini_Countach - 2.jpg" alt="Lamborghini Countach vista lateral"
-                        width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Lotus Esprit</h3>
-                <div class="car-images">
-                    <img src="imagenes/Lotus_Esprit - 1.jpg" alt="Lotus Esprit" width="500">
-                    <img src="imagenes/Lotus_Esprit - 2.jpg" alt="Lotus Esprit vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Ford Bronco</h3>
-                <div class="car-images">
-                    <img src="imagenes/Ford_Bronco - 1.jpg" alt="Ford Bronco" width="500">
-                    <img src="imagenes/Ford_Bronco - 2.jpg" alt="Ford Bronco vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Porsche 928</h3>
-                <div class="car-images">
-                    <img src="imagenes/Porsche_928 - 1.jpg" alt="Porsche 928" width="500">
-                    <img src="imagenes/Porsche_928 - 2.jpg" alt="Porsche 928 vista lateral" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>BMW M1</h3>
-                <div class="car-images">
-                    <img src="imagenes/BMW_M1 - 1.jpg" alt="BMW M1" width="500">
-                    <img src="imagenes/BMW_M1 - 2.jpg" alt="BMW M1 vista lateral" width="500">
-                    <img src="imagenes/BMW_M1 - 3.jpg" alt="BMW M1 vista inferior" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Mazda RX-7</h3>
-                <div class="car-images">
-                    <img src="imagenes/Mazda_RX-7 - 1.jpg" alt="Mazda RX-7" width="500">
-                    <img src="imagenes/Mazda_RX-7 - 2.jpg" alt="Mazda RX-7 vista lateral" width="500">
-                    <img src="imagenes/Mazda_RX-7 - 3.jpg" alt="Mazda RX-7 vista inferior" width="500">
-                </div>
-            </div>
-            <div class="car-item">
-                <h3>Mercedes Clase G</h3>
-                <div class="car-images">
-                    <img src="imagenes/Mercedes-Benz - 1.jpg" alt="Mercedes Clase G" width="500">
-                    <img src="imagenes/Mercedes-Benz - 2.jpg" alt="Mercedes Clase G vista lateral" width="500">
-                </div>
-            </div>
-        </section>
-        <!-- Pie de página -->
-        <footer id="contacto">
-            <p>&copy; 2025 Catalogo de Automóviles Clásicos. Todos los derechos reservados.</p>
-        </footer>
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            </footer>
+            <script src="bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+            <script src="bootstrap/js/popper.min.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+            <!-- Font Awesome for icons -->
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
