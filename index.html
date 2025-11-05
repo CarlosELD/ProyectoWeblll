@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Los Automóviles Clásicos Más Icónicos de los Años 70</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-  <!--  CSS -->
-  <link rel="stylesheet" href="index.css">
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="elementos/CSS/index.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html"><i class="bi bi-car-front-fill me-2"></i>Motors 70's</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -35,28 +36,50 @@
     <div class="container">
       <h1 class="display-4 fw-bold mb-4">Los Automóviles Clásicos Más Icónicos de los Años 70</h1>
       <p class="lead mb-4">Descubre, compra o renta los autos legendarios que marcaron una época dorada del automovilismo</p>
-      <a href="#catalogo" class="btn btn-warning btn-lg px-4">Ver Catálogo</a>
+      <a href="#catalogo" class="btn btn-lg px-4">Ver Catálogo</a>
     </div>
   </section>
 
   <!-- Catálogo -->
-  <section id="catalogo" class="py-5 bg-light">
+  <section id="catalogo" class="py-5">
     <div class="container">
-      <h2 class="section-title">Catálogo de Autos Clásicos</h2>
-      <p class="mb-5">Explora nuestra exclusiva colección de automóviles icónicos de los años 70, disponibles para venta o renta.</p>
+      <h2 class="section-title text-center mb-4">Catálogo de Autos Clásicos</h2>
+      <p class="text-center mb-5">Explora nuestra exclusiva colección de automóviles icónicos de los años 70, disponibles para venta o renta.</p>
       
       <!-- Marcas -->
-      <section id="tipos2" class="mb-4">
-        <h3>Marcas de Automóviles de esta clasificación</h3>
-        <p>Ford</p>
-        <p>Dodge</p>
-        <p>General Motors</p>
-        <p>Citroën</p>
-        <p>Toyota</p>
+      <section id="tipos2" class="mb-5">
+        <h3 class="mb-3">Marcas de Automóviles de esta clasificación</h3>
+        <div class="row text-center">
+          <div class="col-md-2 col-sm-4 col-6 mb-3">
+            <div class="brand-card p-3 rounded">
+              <p class="mb-0">Ford</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-3">
+            <div class="brand-card p-3 rounded">
+              <p class="mb-0">Dodge</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-3">
+            <div class="brand-card p-3 rounded">
+              <p class="mb-0">General Motors</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-3">
+            <div class="brand-card p-3 rounded">
+              <p class="mb-0">Citroën</p>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 mb-3">
+            <div class="brand-card p-3 rounded">
+              <p class="mb-0">Toyota</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Filtro -->
-      <div class="mb-3">
+      <div class="mb-4">
         <label for="filterYear" class="form-label"><strong>Filtrar por año:</strong></label>
         <select id="filterYear" class="form-select w-auto d-inline-block">
           <option value="all">Todos</option>
@@ -73,85 +96,78 @@
 
       <!-- Tabla -->
       <section id="historia">
-        <h3>Tabla de datos sobre los automóviles clásicos más icónicos del mundo</h3>
-            <tr>
-              <th>Modelo</th>
-              <th>Año</th>
-              <th>Motor del modelo</th>
-              <th>Potencia</th>
-              <th>Descripción</th>
-            </tr>
-          </thead>
-          <tbody>
-            <table> 
-<thead> 
-<tr> 
-<th>Modelo</th> 
-<th>Año</th> 
-<th>Motor del modelo</th>
- <th>Potencia</th> 
-<th>Descripción</th> 
-</tr> 
-</thead> 
-<tbody> 
-<tr> 
-<td>Ford Mustang Shelby GT 500</td> 
-<td>1970</td> 
-<td>428 cu in (7.0 L) V8</td> 
-<td>650 HP</td> 
-<td>Un ícono del automovilismo, conocido por su motor V8 y su diseño deportivo.</td> 
-</tr>
- <tr> 
-<td>Chevrolet Camaro Z28</td> 
-<td>1971</td> 
-<td>350 cu in (5.7 L) V8</td> 
-<td>330 HP</td>
-<td>Un muscle car clásico con gran rendimiento y estilo único.</td> 
-</tr> 
-<tr> 
-<td>Datsun 240Z</td> 
-<td>1972</td> 
-<td>2.4 L I6</td> 
-<td>151 HP</td> 
-<td>El auto deportivo japonés que abrió camino en el mercado global.</td> 
-</tr> 
-<tr> 
-<td>Lamborghini Countach</td> 
-<td>1974</td> 
-<td>4.0 L V12</td> 
-<td>370 HP</td> 
-<td>Uno de los diseños más revolucionarios de Lamborghini.</td> 
-</tr> 
-<tr> 
-<td>Lotus Esprit</td> 
-<td>1975</td> 
-<td>2.0 L I4</td> 
-<td>160 HP</td> 
-<td>Un deportivo británico con diseño de Giugiaro.</td> 
-</tr> 
-<tr> 
-<td>Ford Bronco</td> 
-<td>1977</td> 
-<td>5.0 L V8</td> 
-<td>200 HP</td> 
-<td>El todoterreno clásico estadounidense.</td> 
-</tr> 
-<tr> 
-<td>Porsche 928</td> 
-<td>1978</td> 
-<td>4.5 L V8</td> 
-<td>240 HP</td> 
-<td>Un Porsche innovador con motor delantero.</td> 
-</tr> 
-<tr> <td>Mercedes Clase G</td> 
-<td>1979</td> 
-<td>2.8 L I6</td> 
-<td>150 HP</td> 
-<td>El legendario todoterreno alemán, símbolo de resistencia.</td> 
-</tr>
- </tbody>
-          </tbody>
-        </table>
+        <h3 class="mb-3">Tabla de datos sobre los automóviles clásicos más icónicos del mundo</h3>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover" id="carsTable">
+            <thead>
+              <tr>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Motor del modelo</th>
+                <th>Potencia</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ford Mustang Shelby GT 500</td>
+                <td>1970</td>
+                <td>428 cu in (7.0 L) V8</td>
+                <td>650 HP</td>
+                <td>Un ícono del automovilismo, conocido por su motor V8 y su diseño deportivo.</td>
+              </tr>
+              <tr>
+                <td>Chevrolet Camaro Z28</td>
+                <td>1971</td>
+                <td>350 cu in (5.7 L) V8</td>
+                <td>330 HP</td>
+                <td>Un muscle car clásico con gran rendimiento y estilo único.</td>
+              </tr>
+              <tr>
+                <td>Datsun 240Z</td>
+                <td>1972</td>
+                <td>2.4 L I6</td>
+                <td>151 HP</td>
+                <td>El auto deportivo japonés que abrió camino en el mercado global.</td>
+              </tr>
+              <tr>
+                <td>Lamborghini Countach</td>
+                <td>1974</td>
+                <td>4.0 L V12</td>
+                <td>370 HP</td>
+                <td>Uno de los diseños más revolucionarios de Lamborghini.</td>
+              </tr>
+              <tr>
+                <td>Lotus Esprit</td>
+                <td>1975</td>
+                <td>2.0 L I4</td>
+                <td>160 HP</td>
+                <td>Un deportivo británico con diseño de Giugiaro.</td>
+              </tr>
+              <tr>
+                <td>Ford Bronco</td>
+                <td>1977</td>
+                <td>5.0 L V8</td>
+                <td>200 HP</td>
+                <td>El todoterreno clásico estadounidense.</td>
+              </tr>
+              <tr>
+                <td>Porsche 928</td>
+                <td>1978</td>
+                <td>4.5 L V8</td>
+                <td>240 HP</td>
+                <td>Un Porsche innovador con motor delantero.</td>
+              </tr>
+              <tr>
+                <td>Mercedes Clase G</td>
+                <td>1979</td>
+                <td>2.8 L I6</td>
+                <td>150 HP</td>
+                <td>El legendario todoterreno alemán, símbolo de resistencia.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
     </div>
   </section>
@@ -160,9 +176,12 @@
   <div id="ruedaCarga"><div class="rueda"></div></div>
 
   <!-- Footer -->
-  <footer id="contacto" class="bg-dark text-white text-center py-3">
+  <footer id="contacto" class="text-center py-4">
     <p>&copy; 2025 Mundo de Automóviles Clásicos. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Script filtro con loader -->
   <script>

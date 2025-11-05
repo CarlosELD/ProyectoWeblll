@@ -1,9 +1,11 @@
 :root {
     --primary-color: #2c3e50;
-    --secondary-color: #e74c3c;
-    --accent-color: #f39c12;
+    --secondary-color: #3498db;
+    --accent-color: #e67e22;
     --light-color: #ecf0f1;
     --dark-color: #2c3e50;
+    --background-color: #f8f9fa;
+    --text-color: #333;
 }
 
 html,
@@ -14,10 +16,9 @@ body {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    padding-top: 56px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .barba-container {
@@ -50,7 +51,8 @@ html.is-animating .transition-fade {
     transition: color 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--accent-color) !important;
 }
 
@@ -75,10 +77,11 @@ html.is-animating .transition-fade {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
 }
 
 .car-gallery {
@@ -118,7 +121,7 @@ html.is-animating .transition-fade {
 
 .carousel-thumbnails img.active {
     opacity: 1;
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--accent-color);
 }
 
 .car-info {
@@ -139,7 +142,7 @@ html.is-animating .transition-fade {
 }
 
 .price-tag {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     color: white;
     padding: 8px 20px;
     border-radius: 20px;
@@ -158,26 +161,20 @@ html.is-animating .transition-fade {
 }
 
 .btn-primary:hover {
-    background-color: #c0392b;
-    border-color: #c0392b;
+    background-color: #2980b9;
+    border-color: #2980b9;
     transform: translateY(-2px);
 }
 
-.image-placeholder {
-    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    overflow: hidden;
+.btn-outline-primary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
-.image-placeholder img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+.btn-outline-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
 }
 
 .gallery-grid {
@@ -192,6 +189,7 @@ html.is-animating .transition-fade {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    background-color: white;
 }
 
 .gallery-item:hover {
@@ -231,6 +229,12 @@ html.is-animating .transition-fade {
     text-decoration: none;
 }
 
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-section {
@@ -250,10 +254,22 @@ html.is-animating .transition-fade {
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
+
+    .car-item {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 576px) {
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    .car-item .row {
+        flex-direction: column;
+    }
+
+    .car-item .col-lg-6 {
+        margin-bottom: 20px;
     }
 }

@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - Automóviles Clásicos</title>
-    <link rel="stylesheet" href="galeria.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="elementos/CSS/galeria.css">
+    <!-- GSAP y Barba -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-car-front-fill me-2"></i>Motors 70's
@@ -35,88 +43,31 @@
             </div>
         </div>
     </nav>
+
     <!-- Contenido principal con transición Barba -->
-    <div data-barba="container" data-barba-namespace="galeria" class="barba-container">
-        <!-- Hero Section -->
-        <section class="hero-section text-center transition-fade">
-            <div class="container">
-                <h1 class="display-4 font-weight-bold mb-4">Galería de Autos Clásicos</h1>
-                <p class="lead">Explora nuestra exclusiva colección de automóviles icónicos de los años 70</p>
-            </div>
-        </section>
-        <section class="container mb-5 transition-fade">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="section-title">Nuestra Colección Exclusiva</h2>
-                    <p class="lead">Descubre los automóviles más emblemáticos de la década de los 70, meticulosamente
-                        conservados y disponibles para venta o renta.</p>
+    <div data-barba="wrapper">
+        <div data-barba="container" data-barba-namespace="galeria" class="barba-container">
+            <!-- Hero Section -->
+            <section class="hero-section text-center">
+                <div class="container">
+                    <h1 class="display-4 fw-bold mb-4">Galería de Autos Clásicos</h1>
+                    <p class="lead">Explora nuestra exclusiva colección de automóviles icónicos de los años 70</p>
                 </div>
-            </div>
-        </section>
-        <section class="container transition-fade">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="section-title text-center">Más Automóviles en Nuestra Colección</h2>
-                </div>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="imagenes/ford-mustang-boss-302 - 1.jpg" alt="Mustang Boss 302"
-                        onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
-                    <div class="p-3">
-                        <h5>Mustang Boss 302</h5>
-                        <p class="mb-0">Año: 1970 | Potencia: 290 HP</p>
+            </section>
+
+            <!-- Introducción -->
+            <section class="container mb-5">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="section-title">Nuestra Colección Exclusiva</h2>
+                        <p class="lead">Descubre los automóviles más emblemáticos de la década de los 70, meticulosamente
+                            conservados y disponibles para venta o renta.</p>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="imagenes/Pontiac_Firebird - 1.jpg" alt="Pontiac Firebird"
-                        onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
-                    <div class="p-3">
-                        <h5>Pontiac Firebird</h5>
-                        <p class="mb-0">Año: 1970 | Potencia: 335 HP</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagenes/Lamborghini_Countach - 1.jpg" alt="Lamborghini Countach"
-                        onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
-                    <div class="p-3">
-                        <h5>Lamborghini Countach</h5>
-                        <p class="mb-0">Año: 1974 | Potencia: 370-449 HP</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="imagenes/Porsche_928 - 1.jpg" alt="Porsche 928"
-                        onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
-                    <div class="p-3">
-                        <h5>Porsche 928</h5>
-                        <p class="mb-0">Año: 1977 | Potencia: 295-449 HP</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="gallery">
-        <header>
-            <h1>Bienvenidos a la galería oficial de automóviles</h1>
-            <p>En esta página se muestran las imágenes de los vehículos que se presentan en la tabla de datos de la
-                página principal.</p>
-            <p>Un gusto en saludarlos y disfruten de su visita en un recorrido al pasado de la máquina que hoy en día se
-                le debe tributo por su innovación.</p>
-        </header>
-        <section class="container mb-5 transition-fade">
-            <div class="image-placeholder">
-                <img src="imagenes/elemento grafico.png" alt="Colección de autos clásicos" class="img-fluid">
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="section-title">Nuestra Colección Exclusiva</h2>
-                    <p class="lead">Descubre los automóviles más emblemáticos de la década de los 70, meticulosamente conservados y disponibles para venta o renta.</p>
-                </div>
-            </div>
-        </section>
-        <!-- Galería de imágenes de automóviles clásicos -->
-        <section>
-            <section class="container car-gallery transition-fade">
+            </section>
+
+            <!-- Galería de imágenes de automóviles clásicos -->
+            <section class="container car-gallery">
                 <div class="row mb-5">
                     <div class="col-12">
                         <h2 class="section-title text-center">Automóviles Destacados</h2>
@@ -124,10 +75,10 @@
                 </div>
 
                 <!-- Ford Mustang Shelby GT 500 -->
-                <div class="car-item transition-fade">
+                <div class="car-item">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div id="carousel1" class="carousel slide" data-ride="carousel">
+                            <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="imagenes/Shelby_Mustang_GT500 - 1.jpg" class="d-block w-100 rounded"
@@ -145,24 +96,24 @@
                                             onerror="this.src='https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Anterior</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Siguiente</span>
-                                </a>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
                             </div>
                             <div class="carousel-thumbnails">
-                                <img src="imagenes/Shelby_Mustang_GT500 - 1.jpg" class="active" data-target="#carousel1"
-                                    data-slide-to="0"
+                                <img src="imagenes/Shelby_Mustang_GT500 - 1.jpg" class="active" data-bs-target="#carousel1"
+                                    data-bs-slide-to="0"
                                     onerror="this.src='https://images.unsplash.com/photo-1551524164-6ca88f6f0960?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
-                                <img src="imagenes/Shelby_Mustang_GT500 - 2.jpg" data-target="#carousel1"
-                                    data-slide-to="1"
+                                <img src="imagenes/Shelby_Mustang_GT500 - 2.jpg" data-bs-target="#carousel1"
+                                    data-bs-slide-to="1"
                                     onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
-                                <img src="imagenes/Shelby_Mustang_GT500 - 3.jpg" data-target="#carousel1"
-                                    data-slide-to="2"
+                                <img src="imagenes/Shelby_Mustang_GT500 - 3.jpg" data-bs-target="#carousel1"
+                                    data-bs-slide-to="2"
                                     onerror="this.src='https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
                             </div>
                         </div>
@@ -209,7 +160,7 @@
                                 </div>
 
                                 <div class="mt-4">
-                                    <button class="btn btn-primary mr-2">Consultar Venta</button>
+                                    <button class="btn btn-primary me-2">Consultar Venta</button>
                                     <button class="btn btn-outline-primary">Consultar Renta</button>
                                 </div>
                             </div>
@@ -218,10 +169,10 @@
                 </div>
 
                 <!-- Dodge Super Bee -->
-                <div class="car-item transition-fade">
+                <div class="car-item">
                     <div class="row">
                         <div class="col-lg-6 order-lg-2">
-                            <div id="carousel2" class="carousel slide" data-ride="carousel">
+                            <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="imagenes/Super_Bee - 1.jpg" class="d-block w-100 rounded"
@@ -239,22 +190,22 @@
                                             onerror="this.src='https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Anterior</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Siguiente</span>
-                                </a>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
                             </div>
                             <div class="carousel-thumbnails">
-                                <img src="imagenes/Super_Bee - 1.jpg" class="active" data-target="#carousel2"
-                                    data-slide-to="0"
+                                <img src="imagenes/Super_Bee - 1.jpg" class="active" data-bs-target="#carousel2"
+                                    data-bs-slide-to="0"
                                     onerror="this.src='https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
-                                <img src="imagenes/Super_Bee - 2.jpg" data-target="#carousel2" data-slide-to="1"
+                                <img src="imagenes/Super_Bee - 2.jpg" data-bs-target="#carousel2" data-bs-slide-to="1"
                                     onerror="this.src='https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
-                                <img src="imagenes/Super_Bee - 3.jpg" data-target="#carousel2" data-slide-to="2"
+                                <img src="imagenes/Super_Bee - 3.jpg" data-bs-target="#carousel2" data-bs-slide-to="2"
                                     onerror="this.src='https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
                             </div>
                         </div>
@@ -301,7 +252,7 @@
                                 </div>
 
                                 <div class="mt-4">
-                                    <button class="btn btn-primary mr-2">Consultar Venta</button>
+                                    <button class="btn btn-primary me-2">Consultar Venta</button>
                                     <button class="btn btn-outline-primary">Consultar Renta</button>
                                 </div>
                             </div>
@@ -310,60 +261,104 @@
                 </div>
 
             </section>
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <h5>Classic Motors 70's</h5>
-                            <p>Tu destino para encontrar los automóviles clásicos más icónicos de los años 70. Ofrecemos
-                                venta y renta de vehículos únicos y bien conservados.</p>
-                            <div class="social-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 mb-4">
-                            <h5>Enlaces</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="index.html">Inicio</a></li>
-                                <li><a href="galeria.html">Galería</a></li>
-                                <li><a href="contacto.html">Contacto</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <h5>Servicios</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="#">Venta de Autos Clásicos</a></li>
-                                <li><a href="#">Renta de Autos Clásicos</a></li>
-                                <li><a href="#">Restauración</a></li>
-                                <li><a href="#">Asesoría</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4">
-                            <h5>Contacto</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt mr-2"></i> Av. Principal 123, Ciudad</li>
-                                <li><i class="fas fa-phone mr-2"></i> +1 234 567 890</li>
-                                <li><i class="fas fa-envelope mr-2"></i> info@classicmotors70.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr class="bg-light">
-                    <div class="text-center py-3">
-                        <p class="mb-0">&copy; 2024 Classic Motors 70's. Todos los derechos reservados.</p>
+
+            <!-- Más automóviles en galería grid -->
+            <section class="container transition-fade">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center">Más Automóviles en Nuestra Colección</h2>
                     </div>
                 </div>
-            </footer>
-            <script src="bootstrap/js/jquery-3.5.1.slim.min.js"></script>
-            <script src="bootstrap/js/popper.min.js"></script>
-            <script src="bootstrap/js/bootstrap.min.js"></script>
-            <!-- Font Awesome for icons -->
-            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-            <!-- Bootstrap JS -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="imagenes/ford-mustang-boss-302 - 1.jpg" alt="Mustang Boss 302"
+                            onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                        <div class="p-3">
+                            <h5>Mustang Boss 302</h5>
+                            <p class="mb-0">Año: 1970 | Potencia: 290 HP</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/Pontiac_Firebird - 1.jpg" alt="Pontiac Firebird"
+                            onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                        <div class="p-3">
+                            <h5>Pontiac Firebird</h5>
+                            <p class="mb-0">Año: 1970 | Potencia: 335 HP</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/Lamborghini_Countach - 1.jpg" alt="Lamborghini Countach"
+                            onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                        <div class="p-3">
+                            <h5>Lamborghini Countach</h5>
+                            <p class="mb-0">Año: 1974 | Potencia: 370-449 HP</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/Porsche_928 - 1.jpg" alt="Porsche 928"
+                            onerror="this.src='https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                        <div class="p-3">
+                            <h5>Porsche 928</h5>
+                            <p class="mb-0">Año: 1977 | Potencia: 295-449 HP</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Classic Motors 70's</h5>
+                    <p>Tu destino para encontrar los automóviles clásicos más icónicos de los años 70. Ofrecemos
+                        venta y renta de vehículos únicos y bien conservados.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Venta de Autos Clásicos</a></li>
+                        <li><a href="#">Renta de Autos Clásicos</a></li>
+                        <li><a href="#">Restauración</a></li>
+                        <li><a href="#">Asesoría</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Av. Principal 123, Ciudad</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@classicmotors70.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center py-3">
+                <p class="mb-0">&copy; 2024 Classic Motors 70's. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="elementos/JS/galeria.js"></script>
 </body>
 
 </html>
