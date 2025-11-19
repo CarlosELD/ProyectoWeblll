@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,6 +14,7 @@
   <!-- CSS personalizado -->
   <link rel="stylesheet" href="elementos/CSS/index.css">
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -30,12 +32,24 @@
       </div>
     </div>
   </nav>
-
+  <!-- Sección Elemento Gráfico -->
+  <section class="elemento-grafico-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <img src="imagenes/elemento grafico.png" alt="Elemento Gráfico Motors 70's"
+            class="img-fluid elemento-grafico-img"
+            onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Hero Section -->
   <section class="hero-section text-center">
     <div class="container">
       <h1 class="display-4 fw-bold mb-4">Los Automóviles Clásicos Más Icónicos de los Años 70</h1>
-      <p class="lead mb-4">Descubre, compra o renta los autos legendarios que marcaron una época dorada del automovilismo</p>
+      <p class="lead mb-4">Descubre, compra o renta los autos legendarios que marcaron una época dorada del
+        automovilismo</p>
       <a href="#catalogo" class="btn btn-lg px-4">Ver Catálogo</a>
     </div>
   </section>
@@ -44,8 +58,9 @@
   <section id="catalogo" class="py-5">
     <div class="container">
       <h2 class="section-title text-center mb-4">Catálogo de Autos Clásicos</h2>
-      <p class="text-center mb-5">Explora nuestra exclusiva colección de automóviles icónicos de los años 70, disponibles para venta o renta.</p>
-      
+      <p class="text-center mb-5">Explora nuestra exclusiva colección de automóviles icónicos de los años 70,
+        disponibles para venta o renta.</p>
+
       <!-- Marcas -->
       <section id="tipos2" class="mb-5">
         <h3 class="mb-3">Marcas de Automóviles de esta clasificación</h3>
@@ -173,11 +188,18 @@
   </section>
 
   <!-- Loader -->
-  <div id="ruedaCarga"><div class="rueda"></div></div>
+  <div id="ruedaCarga">
+    <div class="rueda"></div>
+  </div>
 
   <!-- Footer -->
   <footer id="contacto" class="text-center py-4">
     <p>&copy; 2025 Mundo de Automóviles Clásicos. Todos los derechos reservados.</p>
+    <div class="contrast-switch">
+    <button class="contrast-btn" onclick="toggleContrast()">
+        <i class="fas fa-adjust me-2"></i>Alto Contraste
+    </button>
+</div>
   </footer>
 
   <!-- Bootstrap JS -->
@@ -206,55 +228,56 @@
 
   <!-- Script animaciones Popmotion o fallback -->
   <script>
-  (function () {
-    function createAnimate() {
-      if (window.popmotion && typeof window.popmotion.animate === "function") {
-        return window.popmotion.animate.bind(window.popmotion);
-      }
-      return function (opts) {
-        const from = opts.from || 0;
-        const to = opts.to || 1;
-        const duration = opts.duration || 300;
-        const delay = opts.delay || 0;
-        const onUpdate = opts.onUpdate || function () {};
-        const ease = opts.ease || function (t) { return t; };
-
-        let startTime = null;
-        function step(now) {
-          if (!startTime) startTime = now + delay;
-          if (now < startTime) return requestAnimationFrame(step);
-          const elapsed = now - startTime;
-          const t = Math.min(1, elapsed / duration);
-          const value = from + (to - from) * ease(t);
-          onUpdate(value);
-          if (t < 1) requestAnimationFrame(step);
+    (function () {
+      function createAnimate() {
+        if (window.popmotion && typeof window.popmotion.animate === "function") {
+          return window.popmotion.animate.bind(window.popmotion);
         }
-        requestAnimationFrame(step);
-        return { stop: () => {} };
-      };
-    }
-    const animate = createAnimate();
+        return function (opts) {
+          const from = opts.from || 0;
+          const to = opts.to || 1;
+          const duration = opts.duration || 300;
+          const delay = opts.delay || 0;
+          const onUpdate = opts.onUpdate || function () { };
+          const ease = opts.ease || function (t) { return t; };
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const title = document.querySelector(".hero-section h1");
-      const subtitle = document.querySelector(".hero-section p.lead");
+          let startTime = null;
+          function step(now) {
+            if (!startTime) startTime = now + delay;
+            if (now < startTime) return requestAnimationFrame(step);
+            const elapsed = now - startTime;
+            const t = Math.min(1, elapsed / duration);
+            const value = from + (to - from) * ease(t);
+            onUpdate(value);
+            if (t < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+          return { stop: () => { } };
+        };
+      }
+      const animate = createAnimate();
 
-      if (title) {
-        title.style.opacity = 0;
-        title.style.transform = "translateY(-50px)";
-        animate({ from: 0, to: 1, duration: 1200, onUpdate: v => title.style.opacity = v });
-        animate({ from: -50, to: 0, duration: 1200, onUpdate: v => title.style.transform = `translateY(${v}px)` });
-      }
-      if (subtitle) {
-        subtitle.style.opacity = 0;
-        subtitle.style.transform = "translateY(30px)";
-        setTimeout(() => {
-          animate({ from: 0, to: 1, duration: 1000, onUpdate: v => subtitle.style.opacity = v });
-          animate({ from: 30, to: 0, duration: 1000, onUpdate: v => subtitle.style.transform = `translateY(${v}px)` });
-        }, 800);
-      }
-    });
-  })();
+      document.addEventListener("DOMContentLoaded", function () {
+        const title = document.querySelector(".hero-section h1");
+        const subtitle = document.querySelector(".hero-section p.lead");
+
+        if (title) {
+          title.style.opacity = 0;
+          title.style.transform = "translateY(-50px)";
+          animate({ from: 0, to: 1, duration: 1200, onUpdate: v => title.style.opacity = v });
+          animate({ from: -50, to: 0, duration: 1200, onUpdate: v => title.style.transform = `translateY(${v}px)` });
+        }
+        if (subtitle) {
+          subtitle.style.opacity = 0;
+          subtitle.style.transform = "translateY(30px)";
+          setTimeout(() => {
+            animate({ from: 0, to: 1, duration: 1000, onUpdate: v => subtitle.style.opacity = v });
+            animate({ from: 30, to: 0, duration: 1000, onUpdate: v => subtitle.style.transform = `translateY(${v}px)` });
+          }, 800);
+        }
+      });
+    })();
   </script>
 </body>
+
 </html>

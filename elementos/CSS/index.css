@@ -1,174 +1,3 @@
-        /** {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: beige;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            padding: 0;
-            margin: 0;
-        }
-        nav {
-            background-color: #333;
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        nav ul {
-            list-style-type: none;
-            text-align: center;
-            padding: 0;
-        }
-        nav li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #f0c040;
-        }
-        nav .brand {
-            font-weight: bold;
-            color: #f0c040;
-        }
-
-        header {
-            padding: 30px 20px;
-            text-align: center;
-            background-color: #f8f8f8;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #222;
-            margin-bottom: 15px;
-            font-size: 2.2rem;
-        }
-        h2 {
-            color: #444;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1200px;
-        }
-
-        ul {
-            margin: 15px 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #e9f7e9;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 768px) {
-            nav li {
-                display: block;
-                margin: 10px 0;
-            }
-            table {
-                font-size: 14px;
-            }
-            th, td {
-                padding: 8px;
-            }
-        }
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            h2 {
-                font-size: 1.3rem;
-            }
-            table {
-                font-size: 12px;
-            }
-            th, td {
-                padding: 6px;
-            }
-        }
-
-
-#ruedaCarga {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-
-#ruedaCarga.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-.rueda {
-    width: 500px;
-    height: 500px;
-    background-image: url("imagenes/RINDECARGA.png");
-    background-size: contain;
-    background-position: center;
-    animation: girar 1s linear infinite;
-}
-
-
-@keyframes girar {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-*/
 /* index.css */
 :root {
   --primary-color: #2c3e50;
@@ -223,6 +52,14 @@ body {
   color: var(--accent-color) !important;
 }
 
+.navbar-nav .nav-link:focus,
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 /* Hero Section */
 .hero-section {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -260,6 +97,36 @@ body {
   background-color: #d35400;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.high-contrast {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
+.high-contrast .navbar {
+    background-color: #000000 !important;
+}
+
+.high-contrast .text-muted {
+    color: #666666 !important;
+}
+
+.contrast-switch {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.contrast-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
 }
 
 /* Secciones */
@@ -304,11 +171,51 @@ section {
   color: var(--primary-color);
 }
 
+.bounce-in {
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in-scale {
+    animation: fadeInScale 0.6s ease-out;
+}
+
 /* Tabla */
 .table-responsive {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.elementogr{
+  height: 500px;
+  width: 900px;
+  margin-left: 200px;
 }
 
 .table {
@@ -451,6 +358,42 @@ footer {
   section {
     padding: 40px 15px;
   }
+
+      .carousel-inner img {
+        height: 300px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .price-tag {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .car-item {
+        min-height: auto;
+        padding: 20px;
+    }
+    
+    .carousel-inner img {
+        height: 400px;
+    }
+    
+    .car-info {
+        min-height: auto;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel-inner img {
+        width: 100%;
+        height: 500px;
+    }
 }
 
 /* Mejoras de accesibilidad */
@@ -477,4 +420,50 @@ footer {
   .table-striped tbody tr:nth-child(even) {
     background-color: #e8e8e8;
   }
+
+  :root {
+        --primary-color: #1a252f;
+        --secondary-color: #0066cc;
+        --accent-color: #cc5500;
+        --success-color: #228b22;
+        --warning-color: #ff8c00;
+        --danger-color: #dc143c;
+    }
+    
+    .btn-primary {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+    
+    .price-tag {
+        background-color: var(--accent-color);
+    }
+}
+
+/* Estilos para el elemento gráfico */
+.elemento-grafico {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elemento-grafico:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.elemento-grafico {
+    animation: fadeInUp 1s ease-out;
 }

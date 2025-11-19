@@ -6,10 +6,12 @@
     --dark-color: #2c3e50;
     --background-color: #f8f9fa;
     --text-color: #333;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
 }
 
-html,
-body {
+* {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -21,39 +23,33 @@ body {
     color: var(--text-color);
 }
 
+.btn-primary {
+    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+.btn-outline-primary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
 .barba-container {
     min-height: calc(100vh - 160px);
-}
-
-/* Animaciones Barba.js */
-.transition-fade {
-    transition: 0.4s;
-    opacity: 1;
-}
-
-html.is-animating .transition-fade {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.navbar {
-    background-color: var(--primary-color) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-    font-weight: 700;
-    color: var(--accent-color) !important;
-}
-
-.nav-link {
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--accent-color) !important;
 }
 
 .hero-section {
@@ -90,42 +86,66 @@ html.is-animating .transition-fade {
 
 .car-item {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    min-height: 650px; /* Altura mínima aumentada */
+    display: flex;
+    align-items: center;
 }
 
 .car-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-thumbnails {
     display: flex;
     justify-content: center;
     margin-top: 15px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .carousel-thumbnails img {
-    width: 80px;
-    height: 60px;
+    width: 100px;
+    height: 70px;
     object-fit: cover;
-    margin: 0 5px 10px;
     cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.3s;
+    opacity: 0.7;
+    transition: all 0.3s ease;
     border-radius: 5px;
+    border: 2px solid transparent;
 }
 
+.carousel-thumbnails img:hover,
 .carousel-thumbnails img.active {
     opacity: 1;
-    border: 2px solid var(--accent-color);
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 576px;
+}
+
+.carousel-inner img {
+    width: 1024px;
+    height: 576px;
+    object-fit: cover;
 }
 
 .car-info {
-    padding: 20px 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 500px;
 }
 
 .car-feature {
@@ -141,40 +161,26 @@ html.is-animating .transition-fade {
     width: 20px;
 }
 
-.price-tag {
-    background-color: var(--accent-color);
+.footer {
+    background-color: var(--primary-color);
     color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: 700;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1.2rem;
+    padding: 40px 0;
+    margin-top: 50px;
 }
 
-.btn-primary {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    padding: 12px 30px;
-    font-weight: 600;
-    transition: all 0.3s;
+.footer h5 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
 }
 
-.btn-primary:hover {
-    background-color: #2980b9;
-    border-color: #2980b9;
-    transform: translateY(-2px);
+.footer a {
+    color: var(--light-color);
+    transition: color 0.3s;
 }
 
-.btn-outline-primary {
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    transform: translateY(-2px);
+.footer a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
 .gallery-grid {
@@ -207,32 +213,52 @@ html.is-animating .transition-fade {
     transform: scale(1.1);
 }
 
-.footer {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 40px 0;
-    margin-top: 50px;
+html.is-animating .transition-fade {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-.footer h5 {
-    color: var(--accent-color);
-    margin-bottom: 20px;
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer a {
-    color: var(--light-color);
+.navbar-brand {
+    font-weight: 700;
+    color: var(--accent-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
     transition: color 0.3s;
 }
 
-.footer a:hover {
-    color: var(--accent-color);
-    text-decoration: none;
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+.price-tag {
+    background: linear-gradient(135deg, var(--accent-color), #d35400);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: inline-block;
+    animation: pulse 2s infinite;
 }
 
 .social-icons a {
     display: inline-block;
     margin-right: 15px;
     font-size: 1.2rem;
+}
+
+/* Animaciones Barba.js */
+.transition-fade {
+    transition: 0.4s;
+    opacity: 1;
 }
 
 /* Responsive */

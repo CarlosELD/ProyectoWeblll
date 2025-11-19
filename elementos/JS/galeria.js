@@ -91,3 +91,23 @@ function activateCarouselThumbnails() {
 document.addEventListener('DOMContentLoaded', function() {
     activateCarouselThumbnails();
 });
+
+// Función para alternar alto contraste
+function toggleContrast() {
+    document.body.classList.toggle('high-contrast');
+    localStorage.setItem('highContrast', document.body.classList.contains('high-contrast'));
+}
+
+// Aplicar preferencia al cargar
+document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('highContrast') === 'true') {
+        document.body.classList.add('high-contrast');
+    }
+    
+    // Aplicar animaciones a elementos específicos
+    const animatedElements = document.querySelectorAll('.car-item, .gallery-item');
+    animatedElements.forEach((element, index) => {
+        element.classList.add('bounce-in');
+        element.style.animationDelay = `${index * 0.1}s`;
+    });
+});

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -161,21 +161,61 @@
             </div>
         </div>
     </section>
-    <!-- Mapa -->
+    <!-- Sección de Nuestras Instalaciones -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title text-center">Nuestra Ubicación</h2>
-            <p class="text-center mb-5">Visita nuestro showroom para ver los vehículos en persona y conversar con
-                nuestros expertos.</p>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-74.00594148458998!3d40.71278367933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e12e88d%3A0x8ef5ee5a84b61e85!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1615391558655!5m2!1sen!2s"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+            <h2 class="section-title text-center">Nuestras Instalaciones</h2>
+            <p class="text-center mb-5">Contamos con un showroom de primera clase para exhibir nuestros automóviles
+                clásicos</p>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="installation-card">
+                        <img src="imagenes/showroom.jpg" alt="Nuestro showroom" class="img-fluid rounded"
+                            onerror="this.src='https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                        <div class="installation-info">
+                            <h4>Showroom Principal</h4>
+                            <p>Amplio espacio climatizado para exhibición de vehículos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="installation-card">
+                        <img src="imagenes/taller.jpg" alt="Nuestro taller" class="img-fluid rounded"
+                            onerror="this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'">
+                        <div class="installation-info">
+                            <h4>Taller Especializado</h4>
+                            <p>Taller equipado para restauración y mantenimiento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Información de contacto mejorada -->
+            <div class="row mt-5">
+                <div class="col-md-4 text-center">
+                    <div class="info-item">
+                        <i class="fas fa-clock fa-2x mb-3"></i>
+                        <h5>Horario de Atención</h5>
+                        <p>Lun-Vie: 9:00 - 18:00<br>Sáb: 10:00 - 16:00</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt fa-2x mb-3"></i>
+                        <h5>Ubicación</h5>
+                        <p>Av. Automóvil Clásico 123<br>Ciudad, Estado 12345</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="info-item">
+                        <i class="fas fa-phone fa-2x mb-3"></i>
+                        <h5>Contacto Directo</h5>
+                        <p>+1 234 567 890<br>info@motors70s.com</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -212,6 +252,11 @@
             <div class="text-center">
                 <p>&copy; 2024 Motors 70's. Todos los derechos reservados.</p>
             </div>
+        </div>
+        <div class="contrast-switch">
+            <button class="contrast-btn" onclick="toggleContrast()">
+                <i class="fas fa-adjust me-2"></i>Alto Contraste
+            </button>
         </div>
     </footer>
     <!-- Bootstrap JS -->
